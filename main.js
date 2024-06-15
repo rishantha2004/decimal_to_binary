@@ -2,9 +2,7 @@ const decimalNumber = document.getElementById('decimalNumber');
 const btn = document.getElementById('btn');
 
 btn.onclick = function() {
-
-    console.log(decimalNumber.value);
-
+    
     // convert user's input string to int
     let stringToInt = parseInt(decimalNumber.value, 10);
 
