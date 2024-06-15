@@ -2,12 +2,11 @@ const decimalNumber = document.getElementById('decimalNumber');
 const btn = document.getElementById('btn');
 
 btn.onclick = function() {
-    
+
     console.log(decimalNumber.value);
 
     // convert user's input string to int
     let stringToInt = parseInt(decimalNumber.value, 10);
-    console.log(typeof stringToInt);
 
     //Array for store binary digits
     let binaryDigits = [];
@@ -20,12 +19,8 @@ btn.onclick = function() {
         binaryDigits.push(remainder);
         //rounder to natural number after dividing
         stringToInt = Math.floor(stringToInt / 2);
-       console.log(stringToInt)
     }
-
-   console.log(binaryDigits);
    //reverse the array and join as string display
    let binaryNumber = binaryDigits.reverse().join('');
    document.getElementById("result").textContent = binaryNumber;
-   console.log(binaryNumber);
 };
